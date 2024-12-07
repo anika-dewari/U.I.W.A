@@ -3,10 +3,9 @@ import {Link} from 'react-router-dom'
 import { FaXmark,FaBlog,FaBars} from "react-icons/fa6";
 import { LiaUniversitySolid } from "react-icons/lia";
 const Navbar = () => {
-  const [isMenuOpen,setIsMenuOpen] = useState(false);
+    const [isMenuOpen,setIsMenuOpen] = useState(false);
     const [isSticky,setIsStickey] = useState(false);
-  
-
+ 
     // toggle menu
     const toggleMenu = ()=>{
         setIsMenuOpen(!isMenuOpen);        
@@ -27,18 +26,29 @@ const Navbar = () => {
         }
     },[])
 
-    // nav items 
-    const navItems=[
+    // nav items agr banada loged in ne hai 
+    // to ussai yea dhikega 
+    const navItems1=[
         {link:"Home",path:"/"},
-        {link:"Insights",path:"/inshome"},
-        {link:"Home",path:"/inshome"},        
+        {link:"SignIn",path:"/signin"},
+        {link:"SignUp",path:"/signup"},        
+    ]
+    // agr banda inspector hai to ussai yea wla anav bar dhikeg 
+    const navItems=[
+        {link:"Home",path:"/inspector/insHome"},
+        {link:"Inspect",path:"/inspector/inspect"},        
     ]
 
-    // hover:bg-[#00bbf1]  bg-[#0f4b8a] hover:text-white drop-shadow-xl
-    // U.I.W.A
+    //      yea wala university wala kai hoga isko dhek lena   
+    // const navItems2=[
+     //     {link:"Home",path:"/"},
+    //     {link:"Insights",path:"/inshome"},
+    //     {link:"Home",path:"/inshome"},        
+    // ]
+
   return (
     <header className='w-full z-20 bg-transparent fixed top-0 left-0 transition-all ease-in duration-300'>
-            <nav className={`p-4 lg:px-24 ${isSticky ? "sticky top-0 left-0 right-0  text-white bg-[#0f4b8a]  drop-shadow-xl":"text-black"}`}>
+            <nav className={`p-4 lg:px-24 ${isSticky ? "sticky top-0 left-0 right-0 text-white bg-[#0f4b8a]  drop-shadow-xl":"text-black"}`}>
                 <div className='flex justify-between items-center text-base'>
                     {/* logo */}
                     <Link to="/" className='text-2xl  flex font-bold uppercase items-center gap-2 '>
@@ -51,7 +61,6 @@ const Navbar = () => {
                             )
                         }
                     </ul>
-
                     
                     {/* menu button for mobile devices */}
 
@@ -65,7 +74,7 @@ const Navbar = () => {
                     </div>                
                 </div>
                 {/* nav items for sm devices  */}
-                <div className={`space-y-4 px-4 mt-12 py-7 bg-[#0f4b8a] ${isMenuOpen ? "block fixed top-0 right-0 left-0": "hidden" }`}>
+                <div className={`space-y-4 top-5 px-4 mt-12 py-7 bg-[#0f4b8a] ${isMenuOpen ? "block fixed top-0 right-0 left-0": "hidden" }`}>
                     {
                         navItems.map(({link,path})=>
                             <Link key={path} to={path} className='block text-base text-white uppercase cursor-pointer p-2 rounded-md hover:bg-[#00bbf1]'>{link}</Link>
@@ -73,8 +82,7 @@ const Navbar = () => {
                     }
                 </div>
             </nav>
-        </header>
-  
+        </header>  
     );
   };
   export default Navbar; 

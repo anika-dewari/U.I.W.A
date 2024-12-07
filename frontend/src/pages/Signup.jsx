@@ -33,7 +33,7 @@ export const Signup = () => {
                     <form className="max-w-sm text-start pt-2">
                         <label
                             htmlFor="designation"
-                            className="block mb-2 text-sm font-medium dark:text-white"
+                            className="block mb-2 text-sm font-medium "
                         >
                             Designation
                         </label>
