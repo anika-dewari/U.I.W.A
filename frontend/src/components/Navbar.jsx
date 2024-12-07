@@ -41,7 +41,7 @@ const Navbar = () => {
 
     //      yea wala university wala kai hoga isko dhek lena   
     // const navItems2=[
-     //     {link:"Home",path:"/"},
+     //     {link:"Home",path:"/university/uniHome"},
     //     {link:"Insights",path:"/inshome"},
     //     {link:"Home",path:"/inshome"},        
     // ]

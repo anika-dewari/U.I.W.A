@@ -14,12 +14,20 @@ const Inshome = () => {
           <UniGraph />
         </div>
         <div className="md:w-1/2 w-full">
+        <h2 className='uppercase text-3xl md:text-4xl bg-white lg:text-5xl p-4 font-bold text-center'>Ranking</h2>
           <UniRanking />
         </div>
       </div>
-      <UniSlider className="w-full"/> 
+      <h2 className='uppercase text-3xl md:text-4xl bg-white lg:text-5xl p-4 font-bold text-left'>Universities</h2>
+      <UniSlider className="w-full"/>
+      <div className='w-full'>
+      <h2 className='uppercase text-3xl md:text-4xl bg-white lg:text-5xl p-4 font-bold text-left'>Judging criteria</h2>
       <JudgingCriteria />
+      </div> 
+      <div className='w-full'>
+      <h2 className='uppercase text-3xl md:text-4xl bg-white lg:text-5xl p-4 font-bold text-left'>Feedback Form</h2>
       <Feedback />
+      </div>
     </div>
   )
 }
