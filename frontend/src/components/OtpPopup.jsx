@@ -34,7 +34,7 @@ const OtpPopup = ({ isOpen, onClose, onSubmit }) => {
           </button>
           <button
             onClick={handleSubmit}
-            className="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 text-sm font-medium"
+            className="px-4 py-2 bg-blue-900 text-white rounded-md hover:bg-blue-900 text-sm font-medium"
           >
             Submit
           </button>

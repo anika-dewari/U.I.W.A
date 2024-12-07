@@ -8,9 +8,7 @@ import { BottomWarning } from '../components/BottomWarning'
 const Insights = () => {
   return (
     <div>
-      <Navbar/>
-      
-      <Footer/>
+       valuable data 
     </div>
   )
 }

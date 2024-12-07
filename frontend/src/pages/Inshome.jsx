@@ -5,9 +5,7 @@ import Footer from '../components/Footer'
 const Inshome = () => {
   return (
     <div>
-      <Navbar/>
        Report will be shown here.
-      <Footer/>
     </div>
   )
 }

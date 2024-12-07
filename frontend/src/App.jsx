@@ -10,10 +10,15 @@ import { University } from "./pages/University";
 import Home from "./pages/Home";
 import Insights from "./pages/Insights";
 import Inshome from "./pages/Inshome";
+import Report from "./pages/Report";
+
+import { Outlet } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 function App() {
   return (
     <>
-      <BrowserRouter>
+      {/* <BrowserRouter>
         <Routes>
         <Route path="/" element={<Home />} />
           <Route path="/signin" element={<Signin />} />
@@ -22,10 +27,17 @@ function App() {
           <Route path="/university" element={<University />} />
           <Route path="/insights" element={<Insights />} />
           <Route path="/inshome" element={<Inshome />} />
-          {/* Optional: Handle undefined routes */}
+          <Route path="/inshome" element={<Inshome />} />
+          <Route path="/report" element={<Report />} />
+          Optional: Handle undefined routes
           <Route path="*" element={<div>Page not found</div>} />
         </Routes>
-      </BrowserRouter>
+      </BrowserRouter> */}
+        <Navbar />
+        <div className="min-h-screen">
+          <Outlet />
+        </div>
+        <Footer />
     </>
   )
 }
