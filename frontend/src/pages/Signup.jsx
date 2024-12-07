@@ -14,7 +14,7 @@ export const Signup = () => {
         if (designation === "UN") {
             navigate("/university");
         } else if (designation === "IS") {
-            navigate("/inspector");
+            navigate("/inspector/Home");
         } else {
             alert("Please select a valid designation.");
         }

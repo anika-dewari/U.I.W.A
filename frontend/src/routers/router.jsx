@@ -41,6 +41,10 @@ import {
       path:"/inspector",
       element:<App/>,
        children:[
+         {
+           path:"/inspector/Home",
+           element:<Inspector/> 
+         },
         {
           path:"/inspector/insHome",
           element:<Inshome/> 
@@ -66,10 +70,10 @@ import {
         //   loader: ({params}) => fetch(`http://localhost:5000/university/${params.id}`)
         // }
      ]
-    }
-    // {
-    //    path:"/university",
-    //    element:<University/>,
+    },
+    {
+       path:"/university",
+       element:<University/>,
     //    children:[
     //      {
     //        path:"/university/unihome",
@@ -81,7 +85,7 @@ import {
     //       loader: ({params}) => fetch(`http://localhost:5000/university/${params.id}`)
     //     }
     //  ]
-    // }
+    }
 ]);
 
   export default router;
